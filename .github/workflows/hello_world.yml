@@ -1,0 +1,31 @@
+# hello world github action yaml file
+
+name: workflow
+
+  on:
+    push:
+      branch:
+        - main
+  on:
+    pull_reques:
+      branch:
+        - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: unbuntu-latest
+    step:
+      - uses: actions/checkout@v2
+      - name: hello world
+      run: echo "hello world"
+      shell: bash
+
+  goodbye:
+    runs-on: unbuntu-latest
+    step:
+      - name: goodbye world
+      run: echo "goodbye world"
+      shell: bash
+
+      
